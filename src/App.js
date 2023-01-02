@@ -9,9 +9,8 @@ function App() {
     dispatch(fetchContent())
   }, [dispatch])
 
-  const contents = useSelector((state) => state.content.contents)
-  const isLoading = useSelector((state) => state.content.isLoading)
-  const error = useSelector((state) => state.content.error)
+  const {contents,isLoading,error}  = useSelector((state) => state.content)
+ 
 
   if (isLoading) {
     return 'loading...'
